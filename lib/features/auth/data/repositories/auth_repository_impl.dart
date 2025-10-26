@@ -24,7 +24,7 @@ class AuthRepositoryImpl implements AuthRepository {
       await Future.delayed(const Duration(seconds: 1));
 
       // Get mock users
-      final mockUsers = _mockDataService.generateMockUsers();
+      final mockUsers = _mockDataService.getMockUsers();
 
       // Find user by email or phone
       User? foundUser;

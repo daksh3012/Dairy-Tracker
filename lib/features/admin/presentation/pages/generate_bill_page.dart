@@ -263,10 +263,10 @@ class _GenerateBillPageState extends State<GenerateBillPage> {
                       return Card(
                         margin: const EdgeInsets.only(bottom: 8),
                         child: ListTile(
-                          title: Text(item.description),
+                          title: Text(item.description ?? item.productName),
                           subtitle: Text('${item.quantity} × ₹${item.unitPrice}'),
                           trailing: Text(
-                            '₹${item.totalAmount}',
+                            '₹${item.totalPrice}',
                             style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
                           leading: IconButton(
