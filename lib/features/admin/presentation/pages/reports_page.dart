@@ -236,7 +236,8 @@ class OverviewTab extends StatelessWidget {
                 const SizedBox(width: 8),
                 Text(
                   title,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  style: const TextStyle(
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primary,
                   ),
@@ -271,12 +272,13 @@ class OverviewTab extends StatelessWidget {
               children: [
                 Text(
                   description,
-                  style: Theme.of(context).textTheme.bodyMedium,
+                  style: const TextStyle(fontSize: 14),
                 ),
                 Text(
                   time,
-                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  style: const TextStyle(
                     color: AppColors.textSecondary,
+                    fontSize: 12,
                   ),
                 ),
               ],
@@ -360,7 +362,8 @@ class SalesTab extends StatelessWidget {
                 const SizedBox(width: 8),
                 Text(
                   title,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  style: const TextStyle(
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primary,
                   ),
@@ -387,14 +390,16 @@ class SalesTab extends StatelessWidget {
         children: [
           Text(
             period,
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+            style: const TextStyle(
               color: AppColors.textSecondary,
+              fontSize: 14,
             ),
           ),
           const SizedBox(height: 4),
           Text(
             amount,
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+            style: const TextStyle(
+              fontSize: 20,
               fontWeight: FontWeight.bold,
               color: AppColors.primary,
             ),
@@ -402,9 +407,10 @@ class SalesTab extends StatelessWidget {
           const SizedBox(height: 4),
           Text(
             change,
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+            style: const TextStyle(
               color: AppColors.success,
               fontWeight: FontWeight.bold,
+              fontSize: 12,
             ),
           ),
         ],
@@ -421,21 +427,23 @@ class SalesTab extends StatelessWidget {
           Expanded(
             child: Text(
               name,
-              style: Theme.of(context).textTheme.bodyMedium,
+              style: const TextStyle(fontSize: 14),
             ),
           ),
           Text(
             units,
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+            style: const TextStyle(
               color: AppColors.textSecondary,
+              fontSize: 12,
             ),
           ),
           const SizedBox(width: 16),
           Text(
             revenue,
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               color: AppColors.primary,
+              fontSize: 14,
             ),
           ),
         ],
@@ -525,7 +533,8 @@ class CustomersTab extends StatelessWidget {
                 const SizedBox(width: 8),
                 Text(
                   title,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  style: const TextStyle(
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primary,
                   ),
@@ -551,16 +560,18 @@ class CustomersTab extends StatelessWidget {
         children: [
           Text(
             value,
-            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+            style: const TextStyle(
+              fontSize: 24,
               fontWeight: FontWeight.bold,
-              color: color,
+              color: AppColors.primary,
             ),
           ),
           const SizedBox(height: 4),
           Text(
             label,
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+            style: const TextStyle(
               color: AppColors.textSecondary,
+              fontSize: 14,
             ),
             textAlign: TextAlign.center,
           ),
@@ -651,7 +662,8 @@ class DeliveriesTab extends StatelessWidget {
                 const SizedBox(width: 8),
                 Text(
                   title,
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  style: const TextStyle(
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primary,
                   ),
@@ -677,16 +689,18 @@ class DeliveriesTab extends StatelessWidget {
         children: [
           Text(
             value,
-            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+            style: const TextStyle(
+              fontSize: 24,
               fontWeight: FontWeight.bold,
-              color: color,
+              color: AppColors.primary,
             ),
           ),
           const SizedBox(height: 4),
           Text(
             label,
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+            style: const TextStyle(
               color: AppColors.textSecondary,
+              fontSize: 14,
             ),
             textAlign: TextAlign.center,
           ),

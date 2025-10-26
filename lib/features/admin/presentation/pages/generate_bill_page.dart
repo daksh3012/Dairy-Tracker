@@ -429,7 +429,7 @@ class _GenerateBillPageState extends State<GenerateBillPage> {
   }
 
   double _getSubtotal() {
-    return _billItems.fold(0.0, (sum, item) => sum + item.totalAmount);
+    return _billItems.fold(0.0, (sum, item) => sum + item.totalPrice);
   }
 
   double _getTax() {
@@ -457,6 +457,8 @@ class _GenerateBillPageState extends State<GenerateBillPage> {
         id: DateTime.now().millisecondsSinceEpoch.toString(),
         customerId: _selectedCustomerId,
         customerName: _customerNameController.text.trim(),
+        customerPhone: _customerPhoneController.text.trim(),
+        customerAddress: _customerAddressController.text.trim(),
         billNumber: 'BILL-${DateTime.now().millisecondsSinceEpoch}',
         billDate: _billDate,
         dueDate: _dueDate,
@@ -464,6 +466,7 @@ class _GenerateBillPageState extends State<GenerateBillPage> {
         items: _billItems,
         subtotal: _getSubtotal(),
         taxAmount: _getTax(),
+        discountAmount: 0.0,
         totalAmount: _getTotalAmount(),
         paidAmount: 0.0,
         balanceAmount: _getTotalAmount(),
@@ -600,10 +603,13 @@ class _AddBillItemDialogState extends State<_AddBillItemDialog> {
 
       final item = BillItem(
         id: DateTime.now().millisecondsSinceEpoch.toString(),
-        description: _descriptionController.text.trim(),
+        productId: 'prod_${DateTime.now().millisecondsSinceEpoch}',
+        productName: _descriptionController.text.trim(),
+        productUnit: 'piece',
         quantity: quantity,
         unitPrice: unitPrice,
-        totalAmount: totalAmount,
+        totalPrice: totalAmount,
+        description: _descriptionController.text.trim(),
       );
 
       widget.onAdd(item);
