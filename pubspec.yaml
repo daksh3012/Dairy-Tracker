@@ -1,0 +1,58 @@
+name: dairy_track
+description: "DairyTrack - Professional Dairy Delivery Management System"
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Core Dependencies
+  cupertino_icons: ^1.0.8
+  
+  # State Management
+  provider: ^6.1.2
+  
+  # Data Models
+  equatable: ^2.0.5
+  
+  # UI Components
+  flutter_svg: ^2.0.10+1
+  google_fonts: ^6.2.1
+  
+  # Charts and Analytics
+  fl_chart: ^0.68.0
+  
+  # Date and Time
+  intl: ^0.19.0
+  
+  # HTTP requests (for future API integration)
+  http: ^1.2.1
+  
+  # Local Storage
+  shared_preferences: ^2.2.3
+  
+  # Dependency Injection
+  get_it: ^7.6.7
+  
+  # Logging
+  logger: ^2.0.2+1
+  
+  # Form Validation
+  formz: ^0.6.1
+  
+  # Image Picker (temporarily disabled for Android compatibility)
+  # image_picker: ^1.0.7
+  
+  # Permission Handler (temporarily disabled for Android compatibility)
+  # permission_handler: ^11.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
